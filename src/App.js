@@ -1,27 +1,25 @@
-import React, { useEffect } from 'react';
+import React, { useEffect, Fragment } from 'react';
 import styles from './App.module.scss';
-import { getShowLoadingScreen } from './store/loading_screen/selectors';
 import { loadQuizData } from "./store/quiz/actions";
 import { connect } from 'react-redux';
+import LoadingScreen from './LoadingScreen';
 
-function App({showLoadingScreen, loadQuizData}) {
+function App({loadQuizData}) {
 	useEffect(() => {
 		loadQuizData();
 	}, [loadQuizData])
 	return (
+		<Fragment>
 			<div className={styles.App}>
 				<header className="styles.App-header">
 					a
 				</header>
 			</div>
+			<LoadingScreen/>
+		</Fragment>
 	);
 }
 
-function mapStateToProps(state) {
-	return {
-		showLoadingScreen: getShowLoadingScreen(state)
-	}
-}
 
 const mapDispatchToProps = (dispatch) => {
 	return {
@@ -29,4 +27,4 @@ const mapDispatchToProps = (dispatch) => {
 	}
 }
 
-export default connect(mapStateToProps, mapDispatchToProps)(App);
+export default connect(null, mapDispatchToProps)(App);
