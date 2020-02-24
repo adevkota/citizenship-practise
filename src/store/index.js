@@ -1,4 +1,5 @@
 import quiz  from "./quiz/reducers";
+import loadingScreen from "./loading_screen/reducers"
 import { combineReducers, createStore, applyMiddleware } from "redux";
 import thunk from "redux-thunk";
 import { composeWithDevTools } from "redux-devtools-extension";
@@ -10,7 +11,8 @@ const middleware = [
 
 export const store = createStore(
 	combineReducers({
-		quiz
+		quiz,
+		loadingScreen
 	}),
 	composeEnhancers(
 		applyMiddleware(...middleware)
