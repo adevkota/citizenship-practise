@@ -6,7 +6,7 @@ import LoadingScreen from './LoadingScreen';
 import { loadQuizData } from "./store/quiz/actions";
 import { getNumberOfQuestions } from "./store/quiz/selectors";
 import { connect } from 'react-redux';
-import QuizTile from './QuizTile';
+import QuizTile from './QuestionTile';
 
 function App({loadQuizData, numberOfQuestions}) {
 	useEffect(() => {

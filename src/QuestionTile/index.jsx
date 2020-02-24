@@ -1,5 +1,5 @@
 import React, { useReducer } from "react";
-import styles from "./QuizTile.module.scss";
+import styles from "./QuestionTile.module.scss";
 import { connect } from "react-redux";
 import { getAnswer, getQuestion } from "../store/quiz/selectors";
 
