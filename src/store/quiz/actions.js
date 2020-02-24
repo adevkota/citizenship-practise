@@ -1,5 +1,5 @@
 import { showLoadingScreen, hideLoadingScreen } from "../loading_screen/actions";
-import { LOAD_QUIZ_DATA } from "./action-types";
+import { LOAD_QUIZ_DATA, VIEW_QUIZ_ANSWER, HIDE_QUIZ_ANSWER } from "./action-types";
 import data from "../../data/quiz.json"
 
 export function loadQuizData() {
@@ -12,5 +12,18 @@ export function loadQuizData() {
 			data
 		})
 		dispatch(hideLoadingScreen());
+	}
+}
+
+export function showQuizAnswer(index) {
+	return {
+		type: VIEW_QUIZ_ANSWER,
+		data: index
+	}
+}
+
+export function hideQuizAnswer() {
+	return {
+		type: HIDE_QUIZ_ANSWER
 	}
 }

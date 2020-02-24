@@ -7,6 +7,7 @@ import { loadQuizData } from "./store/quiz/actions";
 import { getNumberOfQuestions } from "./store/quiz/selectors";
 import { connect } from 'react-redux';
 import QuizTile from './QuestionTile';
+import AnswerModal from './AnswerModal';
 
 function App({loadQuizData, numberOfQuestions}) {
 	useEffect(() => {
@@ -29,6 +30,7 @@ function App({loadQuizData, numberOfQuestions}) {
 						})
 					}
 				</div>
+				<AnswerModal />
 			</div>
 			<LoadingScreen/>
 		</Fragment>
