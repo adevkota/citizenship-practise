@@ -1,19 +1,34 @@
 import React, { useEffect, Fragment } from 'react';
 import styles from './App.module.scss';
-import { loadQuizData } from "./store/quiz/actions";
-import { connect } from 'react-redux';
 import LoadingScreen from './LoadingScreen';
 
-function App({loadQuizData}) {
+
+import { loadQuizData } from "./store/quiz/actions";
+import { getNumberOfQuestions } from "./store/quiz/selectors";
+import { connect } from 'react-redux';
+import QuizTile from './QuizTile';
+
+function App({loadQuizData, numberOfQuestions}) {
 	useEffect(() => {
 		loadQuizData();
 	}, [loadQuizData])
 	return (
 		<Fragment>
 			<div className={styles.App}>
-				<header className="styles.App-header">
-					a
-				</header>
+				<h1 className={styles.header}>
+					Citizenship Practise
+				</h1>
+				<div className={styles.quiz}>
+					{
+						[...Array(numberOfQuestions)].map((_, index) => {
+							return (
+								<div className={styles.tileWrapper} key={index}>
+							 		<QuizTile index={index} />
+								</div>
+							)
+						})
+					}
+				</div>
 			</div>
 			<LoadingScreen/>
 		</Fragment>
@@ -21,10 +36,15 @@ function App({loadQuizData}) {
 }
 
 
+function mapStateToProps(state) {
+	return {
+		numberOfQuestions: getNumberOfQuestions(state)
+	}
+}
 const mapDispatchToProps = (dispatch) => {
 	return {
 		loadQuizData: () => dispatch(loadQuizData())
 	}
 }
 
-export default connect(null, mapDispatchToProps)(App);
+export default connect(mapStateToProps, mapDispatchToProps)(App);

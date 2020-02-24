@@ -1,0 +1,8 @@
+@import "../common/colors.scss";
+.quizTile{
+	border: 1px solid $color-ui-01;
+	border-left: 2px solid $color-brand-01;
+	border-radius: 5px;
+	padding: 10px;
+	width:100%;
+}
