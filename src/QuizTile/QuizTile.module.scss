@@ -3,6 +3,24 @@
 	border: 1px solid $color-ui-01;
 	border-left: 2px solid $color-brand-01;
 	border-radius: 5px;
-	padding: 10px;
 	width:100%;
+	display: flex;
+	flex-direction: column;
+	word-break: break-word;
+	overflow-wrap: break-word;
+
+
+	.question,
+	.answer {
+		padding: 10px;
+		flex: 1;
+	}
+
+	.toggleView{
+		display: flex;
+		justify-content: center;
+		cursor: pointer;
+		padding: 10px 0;
+		border-top: 1px solid $color-ui-01;
+	}
 }

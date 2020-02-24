@@ -3,22 +3,22 @@ import styles from "./QuizTile.module.scss";
 import { connect } from "react-redux";
 import { getAnswer, getQuestion } from "../store/quiz/selectors";
 
-const ACTION_TYPE_SHOW_QUESTION = "show_question";
-const ACTION_TYPE_SHOW_ANSWER = "show_answer";
+
+const ACTION_TYPE_TOGGLE_QUESTION_ANSWER_VIEW = "toggle_question_answer_view";
 
 const initialState = {
 	showAnswer: false,
 	showQuestion: true
 }
 
-const reducer = (state, action) => {
-	switch(action.type) {
-		case ACTION_TYPE_SHOW_ANSWER:
+const reducer = ({...state}, action) => {
+	console.log(action)
+	switch(action) {
+		case ACTION_TYPE_TOGGLE_QUESTION_ANSWER_VIEW:
 			return {
-				showAnswer: true,
-				showQuestion: false
+				showAnswer: !state.showAnswer,
+				showQuestion: !state.showQuestion
 			}
-		case ACTION_TYPE_SHOW_QUESTION:
 		default:
 			return initialState;
 	}
@@ -29,14 +29,18 @@ const QuizTile = ({question, answer}) => {
 		<div className={styles.quizTile}>
 			{
 				state.showQuestion?
-					<span>{question}</span>
+					<span className={styles.question}>{question}</span>
 				:""
 			}
 			{
 				state.showAnswer?
-					<span>{answer}</span>
+					<span className={styles.answer}>{answer}</span>
 				:""
 			}
+			<div className={styles.toggleView} onClick={() => dispatch(ACTION_TYPE_TOGGLE_QUESTION_ANSWER_VIEW)}>
+				<span>View {state.showQuestion? "Answer" : "Question"}</span>
+			</div>
+
 		</div>
 	)
 
