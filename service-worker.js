@@ -14,7 +14,7 @@
 importScripts("https://storage.googleapis.com/workbox-cdn/releases/4.3.1/workbox-sw.js");
 
 importScripts(
-  "/citizenship-practise/precache-manifest.b09b7985324f327cc93b9659469a2956.js"
+  "/citizenship-practise/precache-manifest.0013c77228b7c29941cdbd36e5df515f.js"
 );
 
 self.addEventListener('message', (event) => {

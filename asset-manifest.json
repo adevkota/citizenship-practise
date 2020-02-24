@@ -1,22 +1,22 @@
 {
   "files": {
     "main.css": "/citizenship-practise/static/css/main.e6e91d9a.chunk.css",
-    "main.js": "/citizenship-practise/static/js/main.b80ed7c5.chunk.js",
-    "main.js.map": "/citizenship-practise/static/js/main.b80ed7c5.chunk.js.map",
+    "main.js": "/citizenship-practise/static/js/main.c8e17aac.chunk.js",
+    "main.js.map": "/citizenship-practise/static/js/main.c8e17aac.chunk.js.map",
     "runtime-main.js": "/citizenship-practise/static/js/runtime-main.4f41509f.js",
     "runtime-main.js.map": "/citizenship-practise/static/js/runtime-main.4f41509f.js.map",
-    "static/js/2.7834a065.chunk.js": "/citizenship-practise/static/js/2.7834a065.chunk.js",
-    "static/js/2.7834a065.chunk.js.map": "/citizenship-practise/static/js/2.7834a065.chunk.js.map",
+    "static/js/2.ca4219c9.chunk.js": "/citizenship-practise/static/js/2.ca4219c9.chunk.js",
+    "static/js/2.ca4219c9.chunk.js.map": "/citizenship-practise/static/js/2.ca4219c9.chunk.js.map",
     "index.html": "/citizenship-practise/index.html",
-    "precache-manifest.b09b7985324f327cc93b9659469a2956.js": "/citizenship-practise/precache-manifest.b09b7985324f327cc93b9659469a2956.js",
+    "precache-manifest.0013c77228b7c29941cdbd36e5df515f.js": "/citizenship-practise/precache-manifest.0013c77228b7c29941cdbd36e5df515f.js",
     "service-worker.js": "/citizenship-practise/service-worker.js",
     "static/css/main.e6e91d9a.chunk.css.map": "/citizenship-practise/static/css/main.e6e91d9a.chunk.css.map",
-    "static/js/2.7834a065.chunk.js.LICENSE.txt": "/citizenship-practise/static/js/2.7834a065.chunk.js.LICENSE.txt"
+    "static/js/2.ca4219c9.chunk.js.LICENSE.txt": "/citizenship-practise/static/js/2.ca4219c9.chunk.js.LICENSE.txt"
   },
   "entrypoints": [
     "static/js/runtime-main.4f41509f.js",
-    "static/js/2.7834a065.chunk.js",
+    "static/js/2.ca4219c9.chunk.js",
     "static/css/main.e6e91d9a.chunk.css",
-    "static/js/main.b80ed7c5.chunk.js"
+    "static/js/main.c8e17aac.chunk.js"
   ]
 }
